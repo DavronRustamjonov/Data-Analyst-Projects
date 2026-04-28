@@ -1,0 +1,2856 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20261.26.0226.1626                               -->
+<workbook original-version='18.1' source-build='2026.1.0 (20261.26.0226.1626)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='Zone Sales' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;NA Sales&quot;'>
+        <calculation class='tableau' formula='&quot;NA Sales&quot;' />
+        <members>
+          <member value='&quot;EU Sales&quot;' />
+          <member value='&quot;Global Sales&quot;' />
+          <member value='&quot;JP Sales&quot;' />
+          <member value='&quot;NA Sales&quot;' />
+          <member value='&quot;Other Sales&quot;' />
+        </members>
+      </column>
+      <column caption='Start date' datatype='integer' name='[Parameter 2]' param-domain-type='range' role='measure' type='quantitative' value='1980'>
+        <calculation class='tableau' formula='1980' />
+        <range max='2020' min='1980' />
+      </column>
+      <column caption='End date ' datatype='integer' name='[Parameter 3]' param-domain-type='range' role='measure' type='quantitative' value='2014'>
+        <calculation class='tableau' formula='2014' />
+        <range max='2020' min='1980' />
+      </column>
+    </datasource>
+    <datasource caption='vgsales' inline='true' name='federated.05e50q201qvcii1g0m4d9005a41b' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='vgsales' name='textscan.0rtndoh1fv1isw112gtg90ewojgo'>
+            <connection class='textscan' directory='C:/Users/ASUS/Downloads/SalesDashboard' filename='vgsales.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0rtndoh1fv1isw112gtg90ewojgo' name='vgsales.csv' table='[vgsales#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='uz_Latn_UZ'>
+            <column datatype='integer' name='Rank' ordinal='0' />
+            <column datatype='string' name='Name' ordinal='1' />
+            <column datatype='string' name='Platform' ordinal='2' />
+            <column datatype='integer' name='Year' ordinal='3' />
+            <column datatype='string' name='Genre' ordinal='4' />
+            <column datatype='string' name='Publisher' ordinal='5' />
+            <column datatype='real' name='NA_Sales' ordinal='6' />
+            <column datatype='real' name='EU_Sales' ordinal='7' />
+            <column datatype='real' name='JP_Sales' ordinal='8' />
+            <column datatype='real' name='Other_Sales' ordinal='9' />
+            <column datatype='real' name='Global_Sales' ordinal='10' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[vgsales.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;binary&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;soʻm&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;uz_Latn_UZ&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot; &quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Rank</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Rank]</local-name>
+            <parent-name>[vgsales.csv]</parent-name>
+            <remote-alias>Rank</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[vgsales.csv_5ED26528ECBA465A86D2448ACE1FFB77]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Name]</local-name>
+            <parent-name>[vgsales.csv]</parent-name>
+            <remote-alias>Name</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <object-id>[vgsales.csv_5ED26528ECBA465A86D2448ACE1FFB77]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Platform</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Platform]</local-name>
+            <parent-name>[vgsales.csv]</parent-name>
+            <remote-alias>Platform</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <object-id>[vgsales.csv_5ED26528ECBA465A86D2448ACE1FFB77]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[vgsales.csv]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[vgsales.csv_5ED26528ECBA465A86D2448ACE1FFB77]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Genre</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Genre]</local-name>
+            <parent-name>[vgsales.csv]</parent-name>
+            <remote-alias>Genre</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <object-id>[vgsales.csv_5ED26528ECBA465A86D2448ACE1FFB77]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Publisher</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Publisher]</local-name>
+            <parent-name>[vgsales.csv]</parent-name>
+            <remote-alias>Publisher</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <object-id>[vgsales.csv_5ED26528ECBA465A86D2448ACE1FFB77]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NA_Sales</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[NA_Sales]</local-name>
+            <parent-name>[vgsales.csv]</parent-name>
+            <remote-alias>NA_Sales</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[vgsales.csv_5ED26528ECBA465A86D2448ACE1FFB77]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>EU_Sales</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[EU_Sales]</local-name>
+            <parent-name>[vgsales.csv]</parent-name>
+            <remote-alias>EU_Sales</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[vgsales.csv_5ED26528ECBA465A86D2448ACE1FFB77]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>JP_Sales</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[JP_Sales]</local-name>
+            <parent-name>[vgsales.csv]</parent-name>
+            <remote-alias>JP_Sales</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[vgsales.csv_5ED26528ECBA465A86D2448ACE1FFB77]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Other_Sales</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Other_Sales]</local-name>
+            <parent-name>[vgsales.csv]</parent-name>
+            <remote-alias>Other_Sales</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[vgsales.csv_5ED26528ECBA465A86D2448ACE1FFB77]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Global_Sales</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Global_Sales]</local-name>
+            <parent-name>[vgsales.csv]</parent-name>
+            <remote-alias>Global_Sales</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[vgsales.csv_5ED26528ECBA465A86D2448ACE1FFB77]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Zone Sales' datatype='real' name='[Calculation_1483577818435584]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='CASE [Parameters].[Parameter 1]&#13;&#10;WHEN &quot;EU Sales&quot; then [EU_Sales] &#13;&#10;WHEN &quot;Global Sales&quot; then [Global_Sales] &#13;&#10;WHEN &quot;JP Sales&quot; then [JP_Sales] &#13;&#10;WHEN &quot;NA Sales&quot; then [NA_Sales]&#13;&#10;when &quot;Other Sales&quot; then [Other_Sales] &#13;&#10;END' />
+      </column>
+      <column aggregation='Sum' caption='Study period' datatype='integer' name='[Calculation_1483577823637507]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='IF [Year]&gt;=[Parameters].[Parameter 2] and [Year]&lt;=[Parameters].[Parameter 3] THEN 1&#13;&#10;else 0&#13;&#10;END' />
+      </column>
+      <column datatype='string' name='[Genre]' role='dimension' type='nominal' />
+      <column datatype='string' name='[Platform]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+      <column caption='vgsales.csv' datatype='table' name='[__tableau_internal_object_id__].[vgsales.csv_5ED26528ECBA465A86D2448ACE1FFB77]' role='measure' type='quantitative' />
+      <column-instance column='[Genre]' derivation='None' name='[none:Genre:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Platform]' derivation='None' name='[none:Platform:nk]' pivot='key' type='nominal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/ASUS/AppData/Local/Temp/TableauTemp/#TableauTemp_0exv90j0ww0x3o17ee0t71jxdjuq.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='04/20/2026 11:24:14 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Rank</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Rank]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Rank</remote-alias>
+              <ordinal>0</ordinal>
+              <family>vgsales.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>16598</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[vgsales.csv_5ED26528ECBA465A86D2448ACE1FFB77]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Name</remote-alias>
+              <ordinal>1</ordinal>
+              <family>vgsales.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7054</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='binary' />
+              <object-id>[vgsales.csv_5ED26528ECBA465A86D2448ACE1FFB77]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Platform</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Platform]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Platform</remote-alias>
+              <ordinal>2</ordinal>
+              <family>vgsales.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>23</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='binary' />
+              <object-id>[vgsales.csv_5ED26528ECBA465A86D2448ACE1FFB77]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Year</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Year]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Year</remote-alias>
+              <ordinal>3</ordinal>
+              <family>vgsales.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>53</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[vgsales.csv_5ED26528ECBA465A86D2448ACE1FFB77]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Genre</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Genre]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Genre</remote-alias>
+              <ordinal>4</ordinal>
+              <family>vgsales.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='binary' />
+              <object-id>[vgsales.csv_5ED26528ECBA465A86D2448ACE1FFB77]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Publisher</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Publisher]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Publisher</remote-alias>
+              <ordinal>5</ordinal>
+              <family>vgsales.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>440</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='binary' />
+              <object-id>[vgsales.csv_5ED26528ECBA465A86D2448ACE1FFB77]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>NA_Sales</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[NA_Sales]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>NA_Sales</remote-alias>
+              <ordinal>6</ordinal>
+              <family>vgsales.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>349</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[vgsales.csv_5ED26528ECBA465A86D2448ACE1FFB77]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>EU_Sales</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[EU_Sales]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>EU_Sales</remote-alias>
+              <ordinal>7</ordinal>
+              <family>vgsales.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>246</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[vgsales.csv_5ED26528ECBA465A86D2448ACE1FFB77]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>JP_Sales</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[JP_Sales]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>JP_Sales</remote-alias>
+              <ordinal>8</ordinal>
+              <family>vgsales.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>194</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[vgsales.csv_5ED26528ECBA465A86D2448ACE1FFB77]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Other_Sales</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Other_Sales]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Other_Sales</remote-alias>
+              <ordinal>9</ordinal>
+              <family>vgsales.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>111</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[vgsales.csv_5ED26528ECBA465A86D2448ACE1FFB77]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Global_Sales</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Global_Sales]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Global_Sales</remote-alias>
+              <ordinal>10</ordinal>
+              <family>vgsales.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>487</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[vgsales.csv_5ED26528ECBA465A86D2448ACE1FFB77]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout common-percentage='0.784314' dim-ordering='alphabetic' measure-ordering='alphabetic' parameter-percentage='0.215686' show-structure='true' user-set-layout-v2='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Genre:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;Simulation&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Action&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Platform&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Sports&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Puzzle&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Adventure&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Racing&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Strategy&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Role-Playing&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Fighting&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Shooter&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Misc&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Platform:nk]' palette='blue_10_0' type='palette'>
+            <map to='#2a5783'>
+              <bucket>&quot;X360&quot;</bucket>
+            </map>
+            <map to='#386592'>
+              <bucket>&quot;Wii&quot;</bucket>
+            </map>
+            <map to='#4472a0'>
+              <bucket>&quot;PSP&quot;</bucket>
+            </map>
+            <map to='#5081ae'>
+              <bucket>&quot;PS4&quot;</bucket>
+            </map>
+            <map to='#5f90ba'>
+              <bucket>&quot;PS3&quot;</bucket>
+            </map>
+            <map to='#6e9fc7'>
+              <bucket>&quot;PS2&quot;</bucket>
+            </map>
+            <map to='#7eaed3'>
+              <bucket>&quot;PS&quot;</bucket>
+            </map>
+            <map to='#90bede'>
+              <bucket>&quot;PC&quot;</bucket>
+            </map>
+            <map to='#a4cee9'>
+              <bucket>&quot;GBA&quot;</bucket>
+            </map>
+            <map to='#b9ddf1'>
+              <bucket>&quot;DS&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Uzbekistan&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Zone Sales' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;NA Sales&quot;'>
+          <calculation class='tableau' formula='&quot;NA Sales&quot;' />
+        </column>
+        <column caption='Start date' datatype='integer' name='[Parameter 2]' param-domain-type='range' role='measure' type='quantitative' value='1980'>
+          <calculation class='tableau' formula='1980' />
+          <range max='2020' min='1980' />
+        </column>
+        <column caption='End date ' datatype='integer' name='[Parameter 3]' param-domain-type='range' role='measure' type='quantitative' value='2014'>
+          <calculation class='tableau' formula='2014' />
+          <range max='2020' min='1980' />
+        </column>
+      </datasource-dependencies>
+      <object-graph>
+        <objects>
+          <object caption='vgsales.csv' id='vgsales.csv_5ED26528ECBA465A86D2448ACE1FFB77'>
+            <properties context=''>
+              <relation connection='textscan.0rtndoh1fv1isw112gtg90ewojgo' name='vgsales.csv' table='[vgsales#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='uz_Latn_UZ'>
+                  <column datatype='integer' name='Rank' ordinal='0' />
+                  <column datatype='string' name='Name' ordinal='1' />
+                  <column datatype='string' name='Platform' ordinal='2' />
+                  <column datatype='integer' name='Year' ordinal='3' />
+                  <column datatype='string' name='Genre' ordinal='4' />
+                  <column datatype='string' name='Publisher' ordinal='5' />
+                  <column datatype='real' name='NA_Sales' ordinal='6' />
+                  <column datatype='real' name='EU_Sales' ordinal='7' />
+                  <column datatype='real' name='JP_Sales' ordinal='8' />
+                  <column datatype='real' name='Other_Sales' ordinal='9' />
+                  <column datatype='real' name='Global_Sales' ordinal='10' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sales By Years And Genre'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='vgsales' name='federated.05e50q201qvcii1g0m4d9005a41b' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Zone Sales' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;NA Sales&quot;'>
+              <calculation class='tableau' formula='&quot;NA Sales&quot;' />
+            </column>
+            <column caption='Start date' datatype='integer' name='[Parameter 2]' param-domain-type='range' role='measure' type='quantitative' value='1980'>
+              <calculation class='tableau' formula='1980' />
+              <range max='2020' min='1980' />
+            </column>
+            <column caption='End date ' datatype='integer' name='[Parameter 3]' param-domain-type='range' role='measure' type='quantitative' value='2014'>
+              <calculation class='tableau' formula='2014' />
+              <range max='2020' min='1980' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.05e50q201qvcii1g0m4d9005a41b'>
+            <column caption='Zone Sales' datatype='real' name='[Calculation_1483577818435584]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='CASE [Parameters].[Parameter 1]&#13;&#10;WHEN &quot;EU Sales&quot; then [EU_Sales] &#13;&#10;WHEN &quot;Global Sales&quot; then [Global_Sales] &#13;&#10;WHEN &quot;JP Sales&quot; then [JP_Sales] &#13;&#10;WHEN &quot;NA Sales&quot; then [NA_Sales]&#13;&#10;when &quot;Other Sales&quot; then [Other_Sales] &#13;&#10;END' />
+            </column>
+            <column aggregation='Sum' caption='Study period' datatype='integer' name='[Calculation_1483577823637507]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='IF [Year]&gt;=[Parameters].[Parameter 2] and [Year]&lt;=[Parameters].[Parameter 3] THEN 1&#13;&#10;else 0&#13;&#10;END' />
+            </column>
+            <column datatype='real' name='[EU_Sales]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Genre]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Global_Sales]' role='measure' type='quantitative' />
+            <column datatype='real' name='[JP_Sales]' role='measure' type='quantitative' />
+            <column datatype='real' name='[NA_Sales]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Other_Sales]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+            <column-instance column='[Calculation_1483577823637507]' derivation='None' name='[none:Calculation_1483577823637507:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Genre]' derivation='None' name='[none:Genre:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1483577818435584]' derivation='Sum' name='[sum:Calculation_1483577818435584:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.05e50q201qvcii1g0m4d9005a41b].[none:Calculation_1483577823637507:ok]'>
+            <groupfilter function='member' level='[none:Calculation_1483577823637507:ok]' member='1' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.05e50q201qvcii1g0m4d9005a41b].[none:Genre:nk]'>
+            <groupfilter function='level-members' level='[none:Genre:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='quantitative' column='[federated.05e50q201qvcii1g0m4d9005a41b].[none:Year:qk]' included-values='non-null' />
+          <slices>
+            <column>[federated.05e50q201qvcii1g0m4d9005a41b].[none:Year:qk]</column>
+            <column>[federated.05e50q201qvcii1g0m4d9005a41b].[none:Genre:nk]</column>
+            <column>[federated.05e50q201qvcii1g0m4d9005a41b].[none:Calculation_1483577823637507:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='1' field='[federated.05e50q201qvcii1g0m4d9005a41b].[sum:Calculation_1483577818435584:qk]' field-type='quantitative' fold='true' scope='rows' type='space' />
+            <format attr='title' class='0' field='[federated.05e50q201qvcii1g0m4d9005a41b].[none:Year:qk]' scope='cols' value='' />
+            <format attr='title' class='0' field='[federated.05e50q201qvcii1g0m4d9005a41b].[sum:Calculation_1483577818435584:qk]' scope='rows' value='' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='1' />
+            <format attr='border-color' value='#000000' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#000000' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='solid' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='color' value='#000000' />
+            <format attr='font-weight' value='bold' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#dfedeb' />
+          </style-rule>
+          <style-rule element='legend'>
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#000000' />
+          </style-rule>
+          <style-rule element='legend-title'>
+            <format attr='text-align' value='center' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='solid' />
+          </style-rule>
+          <style-rule element='quick-filter-title'>
+            <format attr='text-align' value='center' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.05e50q201qvcii1g0m4d9005a41b].[sum:Calculation_1483577818435584:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#000000' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.05e50q201qvcii1g0m4d9005a41b].[sum:Calculation_1483577818435584:qk]' y-index='1'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <encodings>
+              <color column='[federated.05e50q201qvcii1g0m4d9005a41b].[none:Genre:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#72b966' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.05e50q201qvcii1g0m4d9005a41b].[sum:Calculation_1483577818435584:qk] + [federated.05e50q201qvcii1g0m4d9005a41b].[sum:Calculation_1483577818435584:qk])</rows>
+        <cols>[federated.05e50q201qvcii1g0m4d9005a41b].[none:Year:qk]</cols>
+      </table>
+      <simple-id uuid='{27D96364-DE89-4934-99F5-E4821DC2DAB2}' />
+    </worksheet>
+    <worksheet name='Top 10 Names By Sales'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='vgsales' name='federated.05e50q201qvcii1g0m4d9005a41b' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Zone Sales' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;NA Sales&quot;'>
+              <calculation class='tableau' formula='&quot;NA Sales&quot;' />
+            </column>
+            <column caption='Start date' datatype='integer' name='[Parameter 2]' param-domain-type='range' role='measure' type='quantitative' value='1980'>
+              <calculation class='tableau' formula='1980' />
+              <range max='2020' min='1980' />
+            </column>
+            <column caption='End date ' datatype='integer' name='[Parameter 3]' param-domain-type='range' role='measure' type='quantitative' value='2014'>
+              <calculation class='tableau' formula='2014' />
+              <range max='2020' min='1980' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.05e50q201qvcii1g0m4d9005a41b'>
+            <column caption='Zone Sales' datatype='real' name='[Calculation_1483577818435584]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='CASE [Parameters].[Parameter 1]&#13;&#10;WHEN &quot;EU Sales&quot; then [EU_Sales] &#13;&#10;WHEN &quot;Global Sales&quot; then [Global_Sales] &#13;&#10;WHEN &quot;JP Sales&quot; then [JP_Sales] &#13;&#10;WHEN &quot;NA Sales&quot; then [NA_Sales]&#13;&#10;when &quot;Other Sales&quot; then [Other_Sales] &#13;&#10;END' />
+            </column>
+            <column aggregation='Sum' caption='Study period' datatype='integer' name='[Calculation_1483577823637507]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='IF [Year]&gt;=[Parameters].[Parameter 2] and [Year]&lt;=[Parameters].[Parameter 3] THEN 1&#13;&#10;else 0&#13;&#10;END' />
+            </column>
+            <column datatype='real' name='[EU_Sales]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Global_Sales]' role='measure' type='quantitative' />
+            <column datatype='real' name='[JP_Sales]' role='measure' type='quantitative' />
+            <column datatype='real' name='[NA_Sales]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Name]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Other_Sales]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+            <column-instance column='[Calculation_1483577823637507]' derivation='None' name='[none:Calculation_1483577823637507:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Name]' derivation='None' name='[none:Name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_1483577818435584]' derivation='Sum' name='[sum:Calculation_1483577818435584:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.05e50q201qvcii1g0m4d9005a41b].[none:Calculation_1483577823637507:ok]'>
+            <groupfilter function='member' level='[none:Calculation_1483577823637507:ok]' member='1' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.05e50q201qvcii1g0m4d9005a41b].[none:Name:nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([Calculation_1483577818435584])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:Name:nk]' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-manual-selection-is-empty='true' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.05e50q201qvcii1g0m4d9005a41b].[none:Name:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.05e50q201qvcii1g0m4d9005a41b].[sum:Calculation_1483577818435584:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.05e50q201qvcii1g0m4d9005a41b].[none:Name:nk]</column>
+            <column>[federated.05e50q201qvcii1g0m4d9005a41b].[none:Calculation_1483577823637507:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.05e50q201qvcii1g0m4d9005a41b].[sum:Calculation_1483577818435584:qk]' scope='cols' value='' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='color' value='#000000' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.05e50q201qvcii1g0m4d9005a41b].[none:Name:nk]' value='192' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+            <format attr='color' value='#000000' />
+            <format attr='font-weight' value='bold' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#e8edda' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.05e50q201qvcii1g0m4d9005a41b].[sum:Calculation_1483577818435584:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#00aa00' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.05e50q201qvcii1g0m4d9005a41b].[none:Name:nk]</rows>
+        <cols>[federated.05e50q201qvcii1g0m4d9005a41b].[sum:Calculation_1483577818435584:qk]</cols>
+      </table>
+      <simple-id uuid='{BD2E02DE-5662-4B4C-AB93-9D2FC4A8AC98}' />
+    </worksheet>
+    <worksheet name='Top 10 Platforms  By Sales '>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='vgsales' name='federated.05e50q201qvcii1g0m4d9005a41b' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Zone Sales' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;NA Sales&quot;'>
+              <calculation class='tableau' formula='&quot;NA Sales&quot;' />
+            </column>
+            <column caption='Start date' datatype='integer' name='[Parameter 2]' param-domain-type='range' role='measure' type='quantitative' value='1980'>
+              <calculation class='tableau' formula='1980' />
+              <range max='2020' min='1980' />
+            </column>
+            <column caption='End date ' datatype='integer' name='[Parameter 3]' param-domain-type='range' role='measure' type='quantitative' value='2014'>
+              <calculation class='tableau' formula='2014' />
+              <range max='2020' min='1980' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.05e50q201qvcii1g0m4d9005a41b'>
+            <column caption='Zone Sales' datatype='real' name='[Calculation_1483577818435584]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='CASE [Parameters].[Parameter 1]&#13;&#10;WHEN &quot;EU Sales&quot; then [EU_Sales] &#13;&#10;WHEN &quot;Global Sales&quot; then [Global_Sales] &#13;&#10;WHEN &quot;JP Sales&quot; then [JP_Sales] &#13;&#10;WHEN &quot;NA Sales&quot; then [NA_Sales]&#13;&#10;when &quot;Other Sales&quot; then [Other_Sales] &#13;&#10;END' />
+            </column>
+            <column aggregation='Sum' caption='Study period' datatype='integer' name='[Calculation_1483577823637507]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='IF [Year]&gt;=[Parameters].[Parameter 2] and [Year]&lt;=[Parameters].[Parameter 3] THEN 1&#13;&#10;else 0&#13;&#10;END' />
+            </column>
+            <column datatype='real' name='[EU_Sales]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Global_Sales]' role='measure' type='quantitative' />
+            <column datatype='real' name='[JP_Sales]' role='measure' type='quantitative' />
+            <column datatype='real' name='[NA_Sales]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Other_Sales]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Platform]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+            <column-instance column='[Calculation_1483577823637507]' derivation='None' name='[none:Calculation_1483577823637507:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Platform]' derivation='None' name='[none:Platform:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_1483577818435584]' derivation='Sum' name='[sum:Calculation_1483577818435584:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.05e50q201qvcii1g0m4d9005a41b].[none:Calculation_1483577823637507:ok]'>
+            <groupfilter function='member' level='[none:Calculation_1483577823637507:ok]' member='1' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.05e50q201qvcii1g0m4d9005a41b].[none:Platform:nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([Calculation_1483577818435584])' function='order' user:ui-marker='order'>
+                <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+                  <groupfilter function='member' level='[none:Platform:nk]' member='&quot;2600&quot;' />
+                  <groupfilter function='member' level='[none:Platform:nk]' member='&quot;3DO&quot;' />
+                  <groupfilter function='member' level='[none:Platform:nk]' member='&quot;3DS&quot;' />
+                  <groupfilter function='member' level='[none:Platform:nk]' member='&quot;DC&quot;' />
+                  <groupfilter function='member' level='[none:Platform:nk]' member='&quot;DS&quot;' />
+                  <groupfilter function='member' level='[none:Platform:nk]' member='&quot;GB&quot;' />
+                  <groupfilter function='member' level='[none:Platform:nk]' member='&quot;GBA&quot;' />
+                  <groupfilter function='member' level='[none:Platform:nk]' member='&quot;GC&quot;' />
+                  <groupfilter function='member' level='[none:Platform:nk]' member='&quot;GEN&quot;' />
+                  <groupfilter function='member' level='[none:Platform:nk]' member='&quot;GG&quot;' />
+                  <groupfilter function='member' level='[none:Platform:nk]' member='&quot;N64&quot;' />
+                  <groupfilter function='member' level='[none:Platform:nk]' member='&quot;NES&quot;' />
+                  <groupfilter function='member' level='[none:Platform:nk]' member='&quot;NG&quot;' />
+                  <groupfilter function='member' level='[none:Platform:nk]' member='&quot;PC&quot;' />
+                  <groupfilter function='member' level='[none:Platform:nk]' member='&quot;PCFX&quot;' />
+                  <groupfilter function='member' level='[none:Platform:nk]' member='&quot;PS&quot;' />
+                  <groupfilter function='member' level='[none:Platform:nk]' member='&quot;PS2&quot;' />
+                  <groupfilter function='member' level='[none:Platform:nk]' member='&quot;PS3&quot;' />
+                  <groupfilter function='member' level='[none:Platform:nk]' member='&quot;PS4&quot;' />
+                  <groupfilter function='member' level='[none:Platform:nk]' member='&quot;PSP&quot;' />
+                  <groupfilter function='member' level='[none:Platform:nk]' member='&quot;PSV&quot;' />
+                  <groupfilter function='member' level='[none:Platform:nk]' member='&quot;SAT&quot;' />
+                  <groupfilter function='member' level='[none:Platform:nk]' member='&quot;SCD&quot;' />
+                  <groupfilter function='member' level='[none:Platform:nk]' member='&quot;SNES&quot;' />
+                  <groupfilter function='member' level='[none:Platform:nk]' member='&quot;TG16&quot;' />
+                  <groupfilter function='member' level='[none:Platform:nk]' member='&quot;WS&quot;' />
+                  <groupfilter function='member' level='[none:Platform:nk]' member='&quot;Wii&quot;' />
+                  <groupfilter function='member' level='[none:Platform:nk]' member='&quot;WiiU&quot;' />
+                  <groupfilter function='member' level='[none:Platform:nk]' member='&quot;X360&quot;' />
+                  <groupfilter function='member' level='[none:Platform:nk]' member='&quot;XB&quot;' />
+                  <groupfilter function='member' level='[none:Platform:nk]' member='&quot;XOne&quot;' />
+                </groupfilter>
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.05e50q201qvcii1g0m4d9005a41b].[none:Calculation_1483577823637507:ok]</column>
+            <column>[federated.05e50q201qvcii1g0m4d9005a41b].[none:Platform:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='color' value='#000000' />
+            <format attr='font-weight' value='bold' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+            <format attr='color' value='#000000' />
+            <format attr='font-weight' value='bold' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#e8edda' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <size column='[federated.05e50q201qvcii1g0m4d9005a41b].[sum:Calculation_1483577818435584:qk]' />
+              <color column='[federated.05e50q201qvcii1g0m4d9005a41b].[sum:Calculation_1483577818435584:qk]' />
+              <text column='[federated.05e50q201qvcii1g0m4d9005a41b].[none:Platform:nk]' />
+              <text column='[federated.05e50q201qvcii1g0m4d9005a41b].[sum:Calculation_1483577818435584:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+                <format attr='mark-transparency' value='147' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{2ED7C877-DB1C-429C-B2C6-AEE6B4E42158}' />
+    </worksheet>
+    <worksheet name='Top 10 Publisher By Sales '>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='vgsales' name='federated.05e50q201qvcii1g0m4d9005a41b' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Zone Sales' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;NA Sales&quot;'>
+              <calculation class='tableau' formula='&quot;NA Sales&quot;' />
+            </column>
+            <column caption='Start date' datatype='integer' name='[Parameter 2]' param-domain-type='range' role='measure' type='quantitative' value='1980'>
+              <calculation class='tableau' formula='1980' />
+              <range max='2020' min='1980' />
+            </column>
+            <column caption='End date ' datatype='integer' name='[Parameter 3]' param-domain-type='range' role='measure' type='quantitative' value='2014'>
+              <calculation class='tableau' formula='2014' />
+              <range max='2020' min='1980' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.05e50q201qvcii1g0m4d9005a41b'>
+            <column caption='Zone Sales' datatype='real' name='[Calculation_1483577818435584]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='CASE [Parameters].[Parameter 1]&#13;&#10;WHEN &quot;EU Sales&quot; then [EU_Sales] &#13;&#10;WHEN &quot;Global Sales&quot; then [Global_Sales] &#13;&#10;WHEN &quot;JP Sales&quot; then [JP_Sales] &#13;&#10;WHEN &quot;NA Sales&quot; then [NA_Sales]&#13;&#10;when &quot;Other Sales&quot; then [Other_Sales] &#13;&#10;END' />
+            </column>
+            <column aggregation='Sum' caption='Study period' datatype='integer' name='[Calculation_1483577823637507]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='IF [Year]&gt;=[Parameters].[Parameter 2] and [Year]&lt;=[Parameters].[Parameter 3] THEN 1&#13;&#10;else 0&#13;&#10;END' />
+            </column>
+            <column datatype='real' name='[EU_Sales]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Global_Sales]' role='measure' type='quantitative' />
+            <column datatype='real' name='[JP_Sales]' role='measure' type='quantitative' />
+            <column datatype='real' name='[NA_Sales]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Other_Sales]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Publisher]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+            <column-instance column='[Calculation_1483577823637507]' derivation='None' name='[none:Calculation_1483577823637507:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Publisher]' derivation='None' name='[none:Publisher:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_1483577818435584]' derivation='Sum' name='[sum:Calculation_1483577818435584:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.05e50q201qvcii1g0m4d9005a41b].[none:Calculation_1483577823637507:ok]'>
+            <groupfilter function='member' level='[none:Calculation_1483577823637507:ok]' member='1' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.05e50q201qvcii1g0m4d9005a41b].[none:Publisher:nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([Calculation_1483577818435584])' function='order' user:ui-marker='order'>
+                <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;10TACLE Studios&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;1C Company&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;20th Century Fox Video Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;2D Boy&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;3DO&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;49Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;505 Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;5pb&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;7G//AMES&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;989 Sports&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;989 Studios&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;AQ Interactive&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;ASC Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;ASCII Entertainment&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;ASCII Media Works&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;ASK&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Abylight&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Acclaim Entertainment&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Accolade&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Ackkstudios&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Acquire&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Activision&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Activision Blizzard&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Activision Value&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Adeline Software&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Aerosoft&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Agatsuma Entertainment&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Agetec&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Aksys Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Alawar Entertainment&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Alchemist&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Alternative Software&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Altron&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Alvion&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;American Softworks&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Angel Studios&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Answer Software&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Aqua Plus&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Aques&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Arc System Works&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Arena Entertainment&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Aria&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Arika&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;ArtDink&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Aruze Corp&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Ascaron Entertainment&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Ascaron Entertainment GmbH&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Asgard&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Asmik Ace Entertainment&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Asmik Corp&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Aspyr&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Astragon&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Asylum Entertainment&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Atari&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Athena&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Atlus&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Avalon Interactive&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Avanquest&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Avanquest Software&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Axela&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;BAM! Entertainment&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;BMG Interactive Entertainment&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;BPS&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Banpresto&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Benesse&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Berkeley&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Bethesda Softworks&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Big Ben Interactive&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Big Fish Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Bigben Interactive&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Black Bean Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Black Label Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Blast! Entertainment Ltd&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Blue Byte&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Bohemia Interactive&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Bomb&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Boost On&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Brash Entertainment&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Broccoli&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;BushiRoad&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;CBS Electronics&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;CCP&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;CDV Software Entertainment&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;CPG Products&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;CTO SpA&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Capcom&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Cave&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;ChunSoft&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;City Interactive&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Cloud Imperium Games Corporation&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Coconuts Japan&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Codemasters&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Codemasters Online&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;CokeM Interactive&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Coleco&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Comfort&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Commseed&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Compile&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Compile Heart&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Conspiracy Entertainment&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Core Design Ltd.&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Crave Entertainment&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Creative Core&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Crimson Cow&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Crystal Dynamics&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Culture Brain&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Culture Publishers&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;CyberFront&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Cygames&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;D3Publisher&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;DHM Interactive&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;DSI Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;DTP Entertainment&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Daedalic&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Daedalic Entertainment&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Daito&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Data Age&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Data Design Interactive&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Data East&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Datam Polystar&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Deep Silver&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Destination Software, Inc&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Destineer&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Detn8 Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Devolver Digital&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;DigiCube&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Disney Interactive Studios&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Dorart&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;DreamCatcher Interactive&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;DreamWorks Interactive&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Dusenberry Martin Racing&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;EA Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;EON Digital Entertainment&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;ESP&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Easy Interactive&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Ecole&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Edia&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Eidos Interactive&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Electronic Arts&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Electronic Arts Victor&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Elf&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Elite&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Empire Interactive&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Encore&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Enix Corporation&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Enjoy Gaming ltd.&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Enterbrain&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Epic Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Epoch&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Ertain&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Essential Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Evolution Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Evolved Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Excalibur Publishing&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Experience Inc.&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Extreme Entertainment Group&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Falcom Corporation&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Fields&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Flashpoint Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Flight-Plan&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Focus Home Interactive&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Focus Multimedia&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Foreign Media Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Fortyfive&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Fox Interactive&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;From Software&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;FuRyu&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;FuRyu Corporation&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Fuji&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;FunSoft&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Funbox Media&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Funcom&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Funsta&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;G.Rev&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;GN Software&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;GOA&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;GSP&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;GT Interactive&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Gaga&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Gainax Network Systems&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Gakken&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Game Arts&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Game Factory&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Game Life&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;GameMill Entertainment&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;GameTek&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Gamebridge&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Gamecock&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Gameloft&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Gathering of Developers&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;General Entertainment&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Genki&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Genterprise&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Ghostlight&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Giga&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Giza10&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Glams&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Global A Entertainment&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Global Star&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Gotham Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Graffiti&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Grand Prix Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Graphsim Entertainment&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Gremlin Interactive Ltd&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Griffin International&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Groove Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;GungHo&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Gust&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;HAL Laboratory&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;HMH Interactive&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Hackberry&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Hamster Corporation&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Happinet&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Harmonix Music Systems&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Hasbro Interactive&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Havas Interactive&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Headup Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Hearty Robin&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Hect&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Hello Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Her Interactive&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Hip Interactive&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Home Entertainment Suppliers&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Hudson Entertainment&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Hudson Soft&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Human Entertainment&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;HuneX&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;IE Institute&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;ITT Family Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Iceberg Interactive&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Idea Factory&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Idea Factory International&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Ignition Entertainment&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Illusion Softworks&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Imadio&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Image Epoch&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Imageworks&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Imagic&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Imagineer&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Imax&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Indie Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Infogrames&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Insomniac Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Interchannel&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Interchannel-Holon&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Intergrow&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Interplay&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Interplay Productions&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Interworks Unlimited, Inc.&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Inti Creates&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Introversion Software&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Irem Software Engineering&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Ivolgamus&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;JVC&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Jack of All Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Jaleco&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Jester Interactive&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;JoWood Productions&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Jorudan&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Just Flight&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;KID&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;KSS&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Kadokawa Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Kadokawa Shoten&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Kaga Create&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Kalypso Media&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Kamui&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Kando Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Karin Entertainment&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Kemco&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Kids Station&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;King Records&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Knowledge Adventure&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Koch Media&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Kokopeli Digital Studios&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Konami Digital Entertainment&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Kool Kizz&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;LEGO Media&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;LSP Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Laguna&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Legacy Interactive&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Level 5&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Lexicon Entertainment&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Licensed 4U&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Lighthouse Interactive&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Liquid Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Little Orbit&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Locus&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;LucasArts&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;MC2 Entertainment&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;MLB.com&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;MTO&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;MTV Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Mad Catz&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Magical Company&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Magix&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Majesco Entertainment&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Mamba Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Marvel Entertainment&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Marvelous Entertainment&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Marvelous Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Marvelous Interactive&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Masque Publishing&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Mastertronic&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Mastiff&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Mattel Interactive&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Max Five&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Maximum Family Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Maxis&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Media Entertainment&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Media Factory&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Media Rings&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Media Works&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;MediaQuest&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Men-A-Vision&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Mentor Interactive&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Mercury Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Merscom LLC&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Metro 3D&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Michaelsoft&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Micro Cabin&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Microids&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Microprose&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Microsoft Game Studios&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Midas Interactive Entertainment&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Midway Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Milestone&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Milestone S.r.l&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Milestone S.r.l.&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Minato Station&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Mindscape&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Mirai Shounen&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Misawa&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Mitsui&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Mojang&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Monte Christo Multimedia&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Moss&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Mud Duck Productions&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Mumbo Jumbo&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Mycom&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Myelin Media&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Mystique&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;N/A&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;NCS&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;NCSoft&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;NDA Productions&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;NEC&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;NEC Interchannel&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Namco Bandai Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Natsume&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Navarre Corp&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Naxat Soft&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Neko Entertainment&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;NetRevo&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;New&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;New World Computing&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;NewKidCo&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Nexon&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Nichibutsu&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Nihon Falcom Corporation&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Nintendo&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Nippon Amuse&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Nippon Columbia&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Nippon Ichi Software&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Nippon Telenet&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Nitroplus&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Nobilis&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Nordcurrent&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Nordic Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;NovaLogic&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Number None&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;O-Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;O3 Entertainment&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Ocean&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Office Create&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;On Demand&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Ongakukan&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Origin Systems&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Otomate&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Oxygen Interactive&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;P2 Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;PM Studios&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;PQube&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Pacific Century Cyber Works&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Pack In Soft&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Pack-In-Video&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Palcom&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Panther Software&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Paon&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Paon Corporation&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Paradox Development&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Paradox Interactive&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Parker Bros.&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Performance Designed Products&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Phantagram&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Phantom EFX&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Phenomedia&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Phoenix Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Piacci&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Pinnacle&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Pioneer LDC&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Play It&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;PlayV&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Playlogic Game Factory&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Playmates&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Playmore&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Plenty&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Pony Canyon&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;PopCap Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;PopTop Software&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Popcorn Arcade&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Pow&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Princess Soft&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Prototype&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Psygnosis&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Quelle&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Quest&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Quinrose&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Quintet&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;RED Entertainment&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;RTL&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Rage Software&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Rain Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Rebellion&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Rebellion Developments&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Red Orb&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Red Storm Entertainment&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;RedOctane&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Reef Entertainment&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Revolution (Japan)&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Revolution Software&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Rising Star Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Riverhillsoft&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Rocket Company&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Rondomedia&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Russel&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;SCS Software&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;SCi&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;SNK&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;SNK Playmore&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;SPS&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;SSI&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Sammy Corporation&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Saurus&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Scholastic Inc.&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Screenlife&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Sega&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Seta Corporation&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Seventh Chord&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Shogakukan&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Simon &amp; Schuster Interactive&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Slightly Mad Studios&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Slitherine Software&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Societa&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Sold Out&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Sonnet&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Sony Computer Entertainment&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Sony Computer Entertainment America&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Sony Computer Entertainment Europe&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Sony Music Entertainment&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Sony Online Entertainment&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;SouthPeak Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Spike&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Square&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Square EA&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Square Enix&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;SquareSoft&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Stainless Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Starfish&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Starpath Corp.&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Sting&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Storm City Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Strategy First&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Success&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Summitsoft&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Sunflowers&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Sunrise Interactive&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Sunsoft&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Sweets&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Swing! Entertainment&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Syscom&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;System 3&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;System 3 Arcade Software&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;System Soft&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;T&amp;E Soft&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;TDK Core&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;TDK Mediactive&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;TGL&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;THQ&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;TOHO&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;TYO&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Taito&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Takara&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Takara Tomy&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Take-Two Interactive&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Takuyo&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;TalonSoft&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Team17 Software&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;TechnoSoft&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Technos Japan Corporation&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Tecmo Koei&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Telegames&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Telltale Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Telstar&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Tetris Online&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;The Adventure Company&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;The Learning Company&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Tigervision&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Time Warner Interactive&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Titus&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Tivola&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Tommo&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Tomy Corporation&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;TopWare Interactive&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Touchstone&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Tradewest&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Trion Worlds&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Tripwire Interactive&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Tru Blu Entertainment&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Tryfirst&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Type-Moon&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;U.S. Gold&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;UEP Systems&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;UFO Interactive&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;UIG Entertainment&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Ubisoft&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Ubisoft Annecy&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Universal Gamex&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Universal Interactive&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Unknown&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Valcon Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;ValuSoft&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Valve&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Valve Software&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Vap&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Vatical Entertainment&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Vic Tokai&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Victor Interactive&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Video System&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Views&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Vir2L Studios&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Virgin Interactive&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Virtual Play Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Visco&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Vivendi Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Wanadoo&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Warashi&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Wargaming.net&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Warner Bros. Interactive Entertainment&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Warp&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;WayForward Technologies&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Westwood Studios&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;White Park Bay Software&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Wizard Video Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;XS Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Xicat Interactive&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Xing Entertainment&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Xplosiv&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Xseed Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Yacht Club Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Yamasa Entertainment&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Yeti&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Yuke&apos;s&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Yumedia&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Zenrin&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Zoo Digital Publishing&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Zoo Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;Zushi Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;bitComposer Games&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;dramatic create&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;fonfun&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;iWin&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;id Software&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;imageepoch Inc.&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;inXile Entertainment&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;mixi, Inc&quot;' />
+                  <groupfilter function='member' level='[none:Publisher:nk]' member='&quot;responDESIGN&quot;' />
+                </groupfilter>
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.05e50q201qvcii1g0m4d9005a41b].[none:Calculation_1483577823637507:ok]</column>
+            <column>[federated.05e50q201qvcii1g0m4d9005a41b].[none:Publisher:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='color' value='#000000' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+            <format attr='color' value='#000000' />
+            <format attr='font-weight' value='bold' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#e8edda' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.05e50q201qvcii1g0m4d9005a41b].[sum:Calculation_1483577818435584:qk]' />
+              <color column='[federated.05e50q201qvcii1g0m4d9005a41b].[sum:Calculation_1483577818435584:qk]' />
+              <text column='[federated.05e50q201qvcii1g0m4d9005a41b].[none:Publisher:nk]' />
+              <text column='[Parameters].[Parameter 1]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{4F8355FE-D6D2-43D2-81BA-FFAB64B82A90}' />
+    </worksheet>
+    <worksheet name='Total Genres  In The Dataset '>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='vgsales' name='federated.05e50q201qvcii1g0m4d9005a41b' />
+          </datasources>
+          <datasource-dependencies datasource='federated.05e50q201qvcii1g0m4d9005a41b'>
+            <column datatype='string' name='[Genre]' role='dimension' type='nominal' />
+            <column-instance column='[Genre]' derivation='CountD' name='[ctd:Genre:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-align' value='center' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-size' value='9' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='color' value='#000000' />
+            <format attr='font-weight' value='bold' />
+            <format attr='font-size' value='10' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#ddebf0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.05e50q201qvcii1g0m4d9005a41b].[ctd:Genre:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{8F8A2624-4E8E-4223-8ED9-F4E2A50D0C51}' />
+    </worksheet>
+    <worksheet name='Total Names In The Dataset'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='vgsales' name='federated.05e50q201qvcii1g0m4d9005a41b' />
+          </datasources>
+          <datasource-dependencies datasource='federated.05e50q201qvcii1g0m4d9005a41b'>
+            <column datatype='string' name='[Name]' role='dimension' type='nominal' />
+            <column-instance column='[Name]' derivation='CountD' name='[ctd:Name:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-align' value='center' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-size' value='9' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='color' value='#000000' />
+            <format attr='font-weight' value='bold' />
+            <format attr='font-size' value='10' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#ddebf0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.05e50q201qvcii1g0m4d9005a41b].[ctd:Name:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{20B28942-A8D0-4A3F-B1E4-43EE941A56EB}' />
+    </worksheet>
+    <worksheet name='Total Platforms In The Dataset'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='vgsales' name='federated.05e50q201qvcii1g0m4d9005a41b' />
+          </datasources>
+          <datasource-dependencies datasource='federated.05e50q201qvcii1g0m4d9005a41b'>
+            <column datatype='string' name='[Platform]' role='dimension' type='nominal' />
+            <column-instance column='[Platform]' derivation='CountD' name='[ctd:Platform:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-align' value='center' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-size' value='9' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='color' value='#000000' />
+            <format attr='font-weight' value='bold' />
+            <format attr='font-size' value='10' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#ddebf0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.05e50q201qvcii1g0m4d9005a41b].[ctd:Platform:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{3590B4CA-E67B-40FD-B14D-09D211ABBE1F}' />
+    </worksheet>
+    <worksheet name='Total Publishers In The Dataset '>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='vgsales' name='federated.05e50q201qvcii1g0m4d9005a41b' />
+          </datasources>
+          <datasource-dependencies datasource='federated.05e50q201qvcii1g0m4d9005a41b'>
+            <column datatype='string' name='[Publisher]' role='dimension' type='nominal' />
+            <column-instance column='[Publisher]' derivation='CountD' name='[ctd:Publisher:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-align' value='center' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-size' value='9' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='color' value='#000000' />
+            <format attr='font-weight' value='bold' />
+            <format attr='font-size' value='10' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#ddebf0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.05e50q201qvcii1g0m4d9005a41b].[ctd:Publisher:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{B5264878-0862-489D-BF34-7D17DF004559}' />
+    </worksheet>
+    <worksheet name='Total Sales By Genre'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='vgsales' name='federated.05e50q201qvcii1g0m4d9005a41b' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Zone Sales' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;NA Sales&quot;'>
+              <calculation class='tableau' formula='&quot;NA Sales&quot;' />
+            </column>
+            <column caption='Start date' datatype='integer' name='[Parameter 2]' param-domain-type='range' role='measure' type='quantitative' value='1980'>
+              <calculation class='tableau' formula='1980' />
+              <range max='2020' min='1980' />
+            </column>
+            <column caption='End date ' datatype='integer' name='[Parameter 3]' param-domain-type='range' role='measure' type='quantitative' value='2014'>
+              <calculation class='tableau' formula='2014' />
+              <range max='2020' min='1980' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.05e50q201qvcii1g0m4d9005a41b'>
+            <column caption='Zone Sales' datatype='real' name='[Calculation_1483577818435584]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='CASE [Parameters].[Parameter 1]&#13;&#10;WHEN &quot;EU Sales&quot; then [EU_Sales] &#13;&#10;WHEN &quot;Global Sales&quot; then [Global_Sales] &#13;&#10;WHEN &quot;JP Sales&quot; then [JP_Sales] &#13;&#10;WHEN &quot;NA Sales&quot; then [NA_Sales]&#13;&#10;when &quot;Other Sales&quot; then [Other_Sales] &#13;&#10;END' />
+            </column>
+            <column aggregation='Sum' caption='Study period' datatype='integer' name='[Calculation_1483577823637507]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='IF [Year]&gt;=[Parameters].[Parameter 2] and [Year]&lt;=[Parameters].[Parameter 3] THEN 1&#13;&#10;else 0&#13;&#10;END' />
+            </column>
+            <column datatype='real' name='[EU_Sales]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Genre]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Global_Sales]' role='measure' type='quantitative' />
+            <column datatype='real' name='[JP_Sales]' role='measure' type='quantitative' />
+            <column datatype='real' name='[NA_Sales]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Other_Sales]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+            <column-instance column='[Calculation_1483577823637507]' derivation='None' name='[none:Calculation_1483577823637507:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Genre]' derivation='None' name='[none:Genre:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_1483577818435584]' derivation='Sum' name='[sum:Calculation_1483577818435584:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.05e50q201qvcii1g0m4d9005a41b].[none:Calculation_1483577823637507:ok]'>
+            <groupfilter function='member' level='[none:Calculation_1483577823637507:ok]' member='1' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.05e50q201qvcii1g0m4d9005a41b].[none:Genre:nk]' direction='ASC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.05e50q201qvcii1g0m4d9005a41b].[sum:Calculation_1483577818435584:qk]' shelf='columns' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.05e50q201qvcii1g0m4d9005a41b].[none:Calculation_1483577823637507:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.05e50q201qvcii1g0m4d9005a41b].[sum:Calculation_1483577818435584:qk]' scope='rows' value='' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='solid' />
+            <format attr='text-align' field='[federated.05e50q201qvcii1g0m4d9005a41b].[sum:Calculation_1483577818435584:qk]' value='auto' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='solid' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-orientation' field='[federated.05e50q201qvcii1g0m4d9005a41b].[none:Genre:nk]' value='-90' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='solid' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+            <format attr='font-weight' value='bold' />
+            <format attr='color' value='#000000' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#e8edda' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.05e50q201qvcii1g0m4d9005a41b].[sum:Calculation_1483577818435584:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#8cd17d' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.05e50q201qvcii1g0m4d9005a41b].[sum:Calculation_1483577818435584:qk]</rows>
+        <cols>[federated.05e50q201qvcii1g0m4d9005a41b].[none:Genre:nk]</cols>
+      </table>
+      <simple-id uuid='{E786E442-AC49-47E4-8D7D-422568D15E53}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style>
+        <style-rule element='parameter-ctrl'>
+          <format attr='background-color' value='#f5f5f5' />
+        </style-rule>
+        <style-rule element='parameter-ctrl-title'>
+          <format attr='text-align' value='center' />
+        </style-rule>
+      </style>
+      <size maxheight='1000' maxwidth='1700' minheight='1000' minwidth='1700' sizing-mode='fixed' />
+      <datasources>
+        <datasource name='Parameters' />
+        <datasource caption='vgsales' name='federated.05e50q201qvcii1g0m4d9005a41b' />
+      </datasources>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Zone Sales' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;NA Sales&quot;'>
+          <calculation class='tableau' formula='&quot;NA Sales&quot;' />
+          <members>
+            <member value='&quot;EU Sales&quot;' />
+            <member value='&quot;Global Sales&quot;' />
+            <member value='&quot;JP Sales&quot;' />
+            <member value='&quot;NA Sales&quot;' />
+            <member value='&quot;Other Sales&quot;' />
+          </members>
+        </column>
+        <column caption='Start date' datatype='integer' name='[Parameter 2]' param-domain-type='range' role='measure' type='quantitative' value='1980'>
+          <calculation class='tableau' formula='1980' />
+          <range max='2020' min='1980' />
+        </column>
+        <column caption='End date ' datatype='integer' name='[Parameter 3]' param-domain-type='range' role='measure' type='quantitative' value='2014'>
+          <calculation class='tableau' formula='2014' />
+          <range max='2020' min='1980' />
+        </column>
+      </datasource-dependencies>
+      <datasource-dependencies datasource='federated.05e50q201qvcii1g0m4d9005a41b'>
+        <column datatype='string' name='[Genre]' role='dimension' type='nominal' />
+        <column-instance column='[Genre]' derivation='None' name='[none:Genre:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='78900' id='7' param='horz' type-v2='layout-flow' w='99058' x='471' y='20300'>
+            <zone h='78900' id='5' type-v2='layout-basic' w='89646' x='471' y='20300'>
+              <zone h='43058' id='3' name='Sales By Years And Genre' w='44823' x='45294' y='20300'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='43058' id='13' name='Total Sales By Genre' w='44823' x='471' y='20300'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='35842' id='14' name='Top 10 Publisher By Sales ' w='32117' x='58000' y='63358'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='35842' id='16' name='Top 10 Names By Sales' w='27823' x='471' y='63358'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='35842' id='17' name='Top 10 Platforms  By Sales ' w='29706' x='28294' y='63358'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='78900' id='18' is-fixed='true' type-v2='layout-basic' w='9412' x='90117' y='20300'>
+              <zone h='33800' id='6' param='vert' type-v2='layout-flow' w='9412' x='90117' y='20300'>
+                <zone fixed-size='308' h='16900' id='9' is-fixed='true' name='Sales By Years And Genre' pane-specification-id='2' param='[federated.05e50q201qvcii1g0m4d9005a41b].[none:Genre:nk]' type-v2='color' w='9412' x='90117' y='20300'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='181' h='16900' id='10' is-fixed='true' mode='compact' param='[Parameters].[Parameter 1]' type-v2='paramctrl' w='9412' x='90117' y='37200'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone h='45100' id='19' param='vert' type-v2='layout-flow' w='9412' x='90117' y='54100'>
+                <zone fixed-size='128' h='13600' id='11' is-fixed='true' mode='slider' param='[Parameters].[Parameter 2]' type-v2='paramctrl' w='9412' x='90117' y='54100'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='118' h='12600' id='12' is-fixed='true' mode='slider' param='[Parameters].[Parameter 3]' type-v2='paramctrl' w='9412' x='90117' y='67700'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone h='19500' id='20' name='Total Names In The Dataset' w='23705' x='471' y='800'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='19500' id='21' name='Total Platforms In The Dataset' w='25294' x='50765' y='800'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='19500' id='22' name='Total Genres  In The Dataset ' w='23470' x='76059' y='800'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='19500' id='23' name='Total Publishers In The Dataset ' w='26589' x='24176' y='800'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='15700' id='8' mode='checkdropdown' name='Sales By Years And Genre' param='[federated.05e50q201qvcii1g0m4d9005a41b].[none:Genre:nk]' type-v2='filter' w='8824' x='90471' y='80900' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='2550' minheight='2550' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='25' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98400' id='24' param='vert' type-v2='layout-flow' w='99058' x='471' y='800'>
+                <zone fixed-size='187' h='19500' id='20' is-fixed='true' name='Total Names In The Dataset' w='23705' x='471' y='800'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='187' h='19500' id='23' is-fixed='true' name='Total Publishers In The Dataset ' w='26589' x='24176' y='800'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='187' h='19500' id='21' is-fixed='true' name='Total Platforms In The Dataset' w='25294' x='50765' y='800'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='187' h='19500' id='22' is-fixed='true' name='Total Genres  In The Dataset ' w='23470' x='76059' y='800'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='43058' id='13' is-fixed='true' name='Total Sales By Genre' w='44823' x='471' y='20300'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='15700' id='8' mode='checkdropdown' name='Sales By Years And Genre' param='[federated.05e50q201qvcii1g0m4d9005a41b].[none:Genre:nk]' type-v2='filter' w='8824' x='90471' y='80900'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='43058' id='3' is-fixed='true' name='Sales By Years And Genre' w='44823' x='45294' y='20300'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='308' h='16900' id='9' name='Sales By Years And Genre' pane-specification-id='2' param='[federated.05e50q201qvcii1g0m4d9005a41b].[none:Genre:nk]' type-v2='color' w='9412' x='90117' y='20300'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='181' h='16900' id='10' mode='compact' param='[Parameters].[Parameter 1]' type-v2='paramctrl' w='9412' x='90117' y='37200'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='128' h='13600' id='11' mode='slider' param='[Parameters].[Parameter 2]' type-v2='paramctrl' w='9412' x='90117' y='54100'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='35842' id='16' is-fixed='true' name='Top 10 Names By Sales' w='27823' x='471' y='63358'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='35842' id='17' is-fixed='true' name='Top 10 Platforms  By Sales ' w='29706' x='28294' y='63358'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='35842' id='14' is-fixed='true' name='Top 10 Publisher By Sales ' w='32117' x='58000' y='63358'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='118' h='12600' id='12' mode='slider' param='[Parameters].[Parameter 3]' type-v2='paramctrl' w='9412' x='90117' y='67700'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{B423215E-A8D6-4D54-AE0B-C6F1489BC7F8}' />
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor='1.5' source-height='44'>
+    <window class='worksheet' name='Sales By Years And Genre'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='checkdropdown' param='[federated.05e50q201qvcii1g0m4d9005a41b].[none:Genre:nk]' type='filter' />
+            <card mode='compact' param='[Parameters].[Parameter 1]' type='parameter' />
+            <card pane-specification-id='2' param='[federated.05e50q201qvcii1g0m4d9005a41b].[none:Genre:nk]' type='color' />
+            <card mode='slider' param='[Parameters].[Parameter 2]' type='parameter' />
+            <card mode='slider' param='[Parameters].[Parameter 3]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{31BC2F48-A53E-4421-87B3-11B9BE7EC782}' />
+    </window>
+    <window class='worksheet' name='Top 10 Names By Sales'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='compact' param='[Parameters].[Parameter 1]' type='parameter' />
+            <card mode='slider' param='[Parameters].[Parameter 2]' type='parameter' />
+            <card mode='slider' param='[Parameters].[Parameter 3]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{6DC64CB5-317E-4217-BC7C-2CCB5FA26C3D}' />
+    </window>
+    <window class='worksheet' name='Top 10 Publisher By Sales '>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='compact' param='[Parameters].[Parameter 1]' type='parameter' />
+            <card mode='slider' param='[Parameters].[Parameter 2]' type='parameter' />
+            <card mode='slider' param='[Parameters].[Parameter 3]' type='parameter' />
+            <card pane-specification-id='0' param='[federated.05e50q201qvcii1g0m4d9005a41b].[sum:Calculation_1483577818435584:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{C1DC24A4-0D68-48E7-B1DA-B644A72756A5}' />
+    </window>
+    <window class='worksheet' name='Top 10 Platforms  By Sales '>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='compact' param='[Parameters].[Parameter 1]' type='parameter' />
+            <card mode='slider' param='[Parameters].[Parameter 2]' type='parameter' />
+            <card mode='slider' param='[Parameters].[Parameter 3]' type='parameter' />
+            <card pane-specification-id='0' param='[federated.05e50q201qvcii1g0m4d9005a41b].[sum:Calculation_1483577818435584:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{208239E3-9A68-4262-84E7-04BE4DDD3854}' />
+    </window>
+    <window class='worksheet' name='Total Names In The Dataset'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{211EA157-4125-431E-9ACD-5EB6134809BD}' />
+    </window>
+    <window class='worksheet' name='Total Genres  In The Dataset '>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{16EC63EE-6300-4CDB-A275-211CCAE1542D}' />
+    </window>
+    <window class='worksheet' name='Total Platforms In The Dataset'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{71CD30E8-992D-482C-A76E-E468F67CDF80}' />
+    </window>
+    <window class='worksheet' name='Total Publishers In The Dataset '>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{AB93277B-5753-4966-B15E-7A95109E77D7}' />
+    </window>
+    <window class='worksheet' name='Total Sales By Genre'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='compact' param='[Parameters].[Parameter 1]' type='parameter' />
+            <card mode='slider' param='[Parameters].[Parameter 2]' type='parameter' />
+            <card mode='slider' param='[Parameters].[Parameter 3]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{40D40561-8F4B-40C6-896C-E2B18DE6341D}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Sales By Years And Genre'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Top 10 Names By Sales'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Top 10 Platforms  By Sales '>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Top 10 Publisher By Sales '>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Total Genres  In The Dataset '>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Total Names In The Dataset'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Total Platforms In The Dataset'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Total Publishers In The Dataset '>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Total Sales By Genre'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='3' />
+      <simple-id uuid='{5858B2C7-959A-478B-BDEB-8219D2AFC780}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Dashboard 1' width='192'>
+      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
+      kSNHCA8PJyAggPz8fJ555hl+97vf4enpyXPPPYdYLOYPf/gDSqWSH//4x/2jDV2mToe9JENd
+      IgUDGCEEb1AnSExMZMWKFTQ0NJCYmEhXVxdms5mcnBxiYmL63QqysrKIiooShojvAUalAVRV
+      VZGVlYVer+dvf/sb6enp1NfX89prr9HS0tKf7ujRo5SVlfUf5+bmcuzYMZ577jk8PT2BvvHn
+      HTt2kJeXh1arxWq18umnn1JZWUlra+uIl03AOUZlE6isrIyCggIAgoKCyMjIICcnh2effZY3
+      33yTn/3sZ3R0dJCRkUFycjKxsbEA9Pb2YjabOXjwIHq9HpFIRF5eHmfPniUsLIyTJ08SFRVF
+      RkYG3t7e/dEOBO5eHDKA+y0w1ty5cyksLEQsFqPValGpVNhstgF+7a+++ipisZgLFy6watWq
+      frm5c+ded70rC0KujOQkJiaOTEEEvjeDGsCezz+koLiIGSsfZf/nH92zgbFuZLAfffQRVVVV
+      TJw4EY1Gg0KhICkpiVdeeYXU1FTef/99fvvb39LU1ERVVdUA2XtpvavArRnUABavSKOkrApl
+      T8VdGRjrxIkT7Ny5k1deeYXXX3+diooKnn76aQ4ePEhPTw+/+tWvqK6u5o033sDHx4fnn3++
+      X/bxxx/v/3v27KterbNmzcJisRAQEIDFYsHX1xdfX98BTlfOrHdN8blaW1idcPSy2+1D4lz2
+      ffIc5c5w8IeXf8/Kh58i0huOfJU9rIGxzpw5Q05ODk8++SRff/01rq6urFnT52904MABWltb
+      eeSRRwZ8yRcsWMDZs2eRy+U88MAD/P3vfychIYGWlhbq6uqQSqVkZ2fzz//8z2zfvn2A45TW
+      1EGXqXNQfSS+0GioBcBd7omH3Ou2ynVtnhInHL1EItGQOJd9nzxHuTMcrFqzlm5NC9aQKayd
+      1zOsgbFOnjzJQw89xOuvv05ISAj19fVotVpcXFzIz88nOjqaS5cuMXbs2H6Zuro6mpubaWho
+      4OWXX+YnP/kJ586dIzs7m4cffpjq6mqCgoLIzMykq6trQH4FHRcc/pLPDFggNGXuYwY1gCnT
+      r1bfAT63DoxlMpl49913SUpKoqioiLa2NlavXk1SUhJnz57l1KlTbN68GX9//+tkx48f3//l
+      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
+      RU5ErkJggg==
+    </thumbnail>
+  </thumbnails>
+</workbook>
